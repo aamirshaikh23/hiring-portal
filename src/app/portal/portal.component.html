@@ -1,0 +1,174 @@
+<div class="talent-pipeline">
+    <div>
+        <div class="row offer-extended">
+            <span class="sub-titles">
+                Offer Extended
+            </span>
+            <div class="wrapper pipeline" *ngFor="let data of offered_data; let i = index;">
+                <div class="wrapper flex-5">
+                    <div class="flex-1">
+                        <span class="icon">{{data.name | slice:0:1}}</span>
+                    </div>
+                    <div class="flex-6">
+                        <span class="name display-block text-big">{{data.name}}</span>
+                        <span class="designation display-block text-medium">{{data.designation}}</span>
+                        <span class="location display-block text-medium">{{data.location}}</span>
+                    </div>
+                </div>
+                <div class="text-center border-right flex-3">
+                    <span class="text-medium display-block">
+                        Offer Extended on
+                    </span>
+                    <span class="text-medium-dark display-block">
+                        {{data.extended}}
+                    </span>
+                </div>
+                <div class="text-center border-right flex-3">
+                    <span class="text-medium">
+                        Offer Accepted on
+                    </span>
+                    <span class="text-medium-dark display-block">
+                        {{data.accepted}}
+                    </span>
+                </div>
+                <div class="text-center border-right flex-3">
+                    <span class="text-medium display-block">
+                        Date of Joining
+                    </span>
+                    <span class="text-medium-darkdisplay-block">
+                        {{data.doj}}
+                    </span>
+                </div>
+                <div class="text-center border-right flex-3">
+                    <span class="text-medium">
+                        Joining Status
+                    </span>
+                    <span class="text-medium display-block">
+                        <div class="dropdown show">
+                            <a class="btn dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                                id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img src="assets/icons/{{data.joining_status}}.svg" alt="">
+                            </a>
+
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item text-center" *ngFor="let icon of status"
+                                    (click)="setJoiningStatus(icon.value,i)">
+                                    <img src="{{icon.image}}" alt="{{icon.value}}">
+                                    <span class="hidden"
+                                        [ngClass]="{'active-blip': data.joining_status == icon.value }">●</span>
+                                </a>
+                            </div>
+                        </div>
+                    </span>
+                </div>
+                <div class="text-center flex-2">
+                    <span class="text-medium">
+                        B.V
+                    </span>
+                    <span class="text-medium display-block">
+                        <div class="dropdown show">
+                            <a class="btn dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                                id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img src="assets/icons/{{data.bgv}}.svg" alt="">
+                            </a>
+
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item text-center" *ngFor="let icon of status"
+                                    (click)="setBGVStatus(icon.value,i)">
+                                    <img src="{{icon.image}}" alt="{{icon.value}}">
+                                    <span class="hidden" [ngClass]="{'active-blip': data.bgv == icon.value }">●</span>
+                                </a>
+                            </div>
+                        </div>
+                    </span>
+                </div>
+                <div style="flex: 5.7" class="wrapper">
+                    <div class="text-small flex-6">
+                        {{data.comments}}
+                    </div>
+                    <div class="kebab-menu flex-1">
+
+                        <span class="text-medium display-block">
+                            <div class="dropdown show">
+                                <a class="btn dropdown-toggle sort-opt" data-bs-toggle="dropdown" href="#" role="button"
+                                    id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">
+                                    <img src="assets/icons/kebab.svg" alt="menu">
+                                </a>
+
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                    <a class="dropdown-item text-center text-medium">
+                                        Edit Comment
+                                    </a>
+                                    <a class="dropdown-item text-center text-medium">
+                                        Hide Comment
+                                    </a>
+                                </div>
+                            </div>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row offer-extended" cdkDropList (cdkDropListDropped)="drop($event)">
+            <span class="sub-titles">
+                Prospects
+            </span>
+            <div class="wrapper prospect-heading">
+                <div class="flex-3 size-14">
+                    CANDIDATE DETAILS
+                </div>
+                <div class="flex-4 size-14">
+                    INTERVIEW SCHEDULE
+                </div>
+                <div class="flex-3 size-14">
+                    REFERENCE CHECK
+                </div>
+                <div class="flex-3 size-14">
+                    COMMENTS
+                </div>
+            </div>
+
+            <div class="wrapper text-center">
+                <div class="flex-3"></div>
+                <div class="wrapper flex-4 size-14 text-medium prospect-sub-heading">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-chevron-left pointer" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+                    </svg>
+                    <div *ngFor="let number of [0,1,2,3]">
+                        <img src="assets/images/Interviewer.svg" alt="Interviewer">
+                    </div>
+                    <svg class="pointer" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-chevron-right pointer" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                    </svg>
+                </div>
+                <div class="wrapper flex-3 size-14">
+                    <div class="text-medium border-right">
+                        LEADS
+                    </div>
+                    <div class="text-medium">
+                        CAPTURED
+                    </div>
+                </div>
+                <div class="flex-3"></div>
+            </div>
+
+            <app-candidate-card class="wrapper pipeline draggable pointer" *ngFor="let data of prospect_data"
+                [candidateData]="data" cdkDrag></app-candidate-card>
+
+        </div>
+
+        <div class="row offer-extended">
+            <span class="sub-titles">
+                Dropped
+            </span>
+            <app-candidate-card class="wrapper pipeline" *ngFor="let data of dropped_data"
+                [candidateData]="data"></app-candidate-card>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,111 @@
+.talent-pipeline {
+    background: #fafafd;
+    padding: 2pc 3pc;
+}
+
+.row.accepted-candidate {
+    margin: 12px 0px;
+    background: #FFFFFF;
+    border: 1px solid #d6d6d6;
+}
+
+.icon {
+    display: inline-block;
+    font-size: 12px;
+    width: 2.5em;
+    height: 2.5em;
+    line-height: 2.5em;
+    text-align: center;
+    border-radius: 50%;
+    background: plum;
+    vertical-align: middle;
+    margin-right: 1em;
+    color: white;
+}
+
+.pipeline {
+    background: white;
+    padding: 6px 12px;
+    border: 1px solid #F3F3F3;
+    border-radius: 1px;
+    // cursor: move;
+    margin: 10px 0px;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.wrapper>div {
+    flex: 1;
+}
+
+
+// Drag and Drop Start
+
+.cdk-drag-preview {
+    box-sizing: border-box;
+    border-radius: 4px;
+    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+        0 8px 10px 1px rgba(0, 0, 0, 0.14),
+        0 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+.cdk-drag-placeholder {
+    opacity: 0;
+}
+
+.cdk-drag-animating {
+    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.sub-titles {
+    padding: 0px 0px 3px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.wrapper.prospect-heading {
+    background: white;
+    border: 1px solid #f3f3f3;
+    padding: 9px 10px;
+    text-align: center;
+    border-radius: 1px;
+    color: #8A8A8A;
+}
+
+::ng-deep .dropdown-menu {
+    min-width: 4pc;
+}
+
+a#dropdownMenuLink {
+    background: white;
+    color: #525557;
+    border: none;
+    padding: 0px 1px 6px;
+}
+
+::ng-deep .sort-opt::after {
+    display: none;
+}
+
+.wrapper.prospect-sub-heading {
+    padding: 15px 0px 5px;
+}
+
+span.active-blip {
+    width: 8px !important;
+    height: 8px !important;
+    color: #FFBC9C;
+    z-index: 99999999 !important;
+    position: relative;
+    border-radius: 50%;
+    top: 1px;
+    right: -6px;
+    visibility: initial;
+}
+
+.deadline {
+    color: #E02020 !important;
+}

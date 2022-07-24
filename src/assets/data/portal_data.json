@@ -1,0 +1,138 @@
+{
+    "offered" : [
+        {
+            "name": "Aniket Joshi",
+            "designation": "Director, Piramal Enterprises",
+            "location": "Mumbai",
+            "extended": "21 Jul 2020",
+            "accepted": "23 Jul 2020",
+            "doj": "1 Sep 2020",
+            "joining_status": "positive",
+            "bgv": "neutral",
+            "comments": "Metus etiam. Platea aliquet vulputate. Egestas. Lacinia ultrices. Pharetra. Quisque odio morbi sod tea aliquet vulputate.teame"
+        }
+    ],
+    "prospects" : [
+        {
+            "name": "Rahul Kumar",
+            "designation": "Director, Piramal Enterprises",
+            "location": "Mumbai",
+            "rounds": [
+                {
+                    "status": "Hire",
+                    "date": "1 Jul 2018"
+                },
+                {
+                    "status": "Awaiting Feedback",
+                    "deadline": false,
+                    "date": "1 Jul 2018"
+                },
+                {
+                    "status": "Undecided",
+                    "date": "1 Jul 2018"
+                },
+                {
+                    "status": "Scheduled",
+                    "date": "1 Jul 2018"
+                }
+            ],
+            "reference": {
+                "leads" : 3,
+                "captured" : 2
+            },
+            "comments": "Metus etiam. Platea aliquet vulputate. Egestas. Lacinia ultrices. Pharetra. Quisque odio morbi sod tea aliquet vulputate.teame"
+        },
+        {
+            "name": "Kunal Kamra",
+            "designation": "Director, Piramal Enterprises",
+            "location": "Mumbai",
+            "rounds": [
+                {
+                    "status": "Hire",
+                    "date": "1 Jul 2018"
+                },
+                {
+                    "status": "Awaiting Feedback",
+                    "deadline": false,
+                    "date": "1 Jul 2018"
+                },
+                {
+                    "status": "No Hire",
+                    "date": "1 Jul 2018"
+                },
+                {
+                    "status": "Scheduled",
+                    "date": "1 Jul 2018"
+                }
+            ],
+            "reference": {
+                "leads" : 3,
+                "captured" : 2
+            },
+            "comments": "Metus etiam. Platea aliquet vulputate. Egestas. Lacinia ultrices. Pharetra. Quisque odio morbi sod tea aliquet vulputate.teame"
+        },
+        {
+            "name": "Harshal Patel",
+            "designation": "Director, Piramal Enterprises",
+            "location": "Mumbai",
+            "rounds": [
+                {
+                    "status": "Hire",
+                    "date": "1 Jul 2018"
+                },
+                {
+                    "status": "Awaiting Feedback",
+                    "deadline": true,
+                    "date": "1 Jul 2018"
+                },
+                {
+                    "status": "No Hire",
+                    "date": "1 Jul 2018"
+                },
+                {
+                    "status": "Scheduled",
+                    "date": "1 Jul 2018"
+                }
+            ],
+            "reference": {
+                "leads" : 3,
+                "captured" : 2
+            },
+            "comments": "Metus etiam. Platea aliquet vulputate. Egestas. Lacinia ultrices. Pharetra. Quisque odio morbi sod tea aliquet vulputate.teame"
+        }
+    ],
+    "dropped" : [
+        {
+            "name": "Aniket Joshi",
+            "designation": "Director, Piramal Enterprises",
+            "location": "Mumbai",
+            "rounds": [
+                {
+                    "status": "Hire",
+                    "date": "1 Jul 2018"
+                },
+                {
+                    "status": "Awaiting Feedback",
+                    "date": "1 Jul 2018"
+                },
+                {
+                    "status": "No Hire",
+                    "date": "1 Jul 2018"
+                },
+                {
+                    "status": "Scheduled",
+                    "date": "1 Jul 2018"
+                }
+            ],
+            "hire": true,
+            "feedback": false,
+            "status": "No Hire",
+            "date": "1 Jul 2018",
+            "reference": {
+                "leads" : 3,
+                "captured" : 2
+            },
+            "comments": "Metus etiam. Platea aliquet vulputate. Egestas. Lacinia ultrices. Pharetra. Quisque odio morbi sod tea aliquet vulputate.teame"
+        }
+    ]
+}
